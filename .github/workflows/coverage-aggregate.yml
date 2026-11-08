@@ -11,20 +11,21 @@ name: Aggregate backend coverage
 #     one of the producers fails partway through
 #   - frontend producers can be added later without touching the
 #     producers themselves
-on:
-  workflow_call:
-    inputs:
-      frontend-validation-result:
-        description: Result of the frontend-validation producer job
-        required: false
-        type: string
-        default: skipped
-      playwright-e2e-live-result:
-        description: Result of the playwright-e2e-live producer job
-        required: false
-        type: string
-        default: skipped
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_call:
+#     inputs:
+#       frontend-validation-result:
+#         description: Result of the frontend-validation producer job
+#         required: false
+#         type: string
+#         default: skipped
+#       playwright-e2e-live-result:
+#         description: Result of the playwright-e2e-live producer job
+#         required: false
+#         type: string
+#         default: skipped
+# 
 permissions:
   contents: read
 

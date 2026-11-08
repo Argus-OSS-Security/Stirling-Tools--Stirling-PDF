@@ -2,10 +2,11 @@ name: Pre-commit
 
 # Runs the repo-wide lint/format/secret checks via `task pre-commit`.
 # Called from build.yml on PRs and merge_group; also runnable on demand via workflow_dispatch.
-on:
-  workflow_call:
-  workflow_dispatch:
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_call:
+#   workflow_dispatch:
+# 
 permissions:
   contents: read
 

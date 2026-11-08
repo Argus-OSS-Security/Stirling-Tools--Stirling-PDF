@@ -1,19 +1,20 @@
 name: Publish to AUR
 
-on:
-  release:
-    types: [released]
-  workflow_dispatch:
-    inputs:
-      version:
-        description: "Version to publish (e.g. 2.9.2 — no v prefix)"
-        required: true
-        type: string
-      dry_run:
-        description: "Skip the AUR push (safe test)"
-        type: boolean
-        default: true
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   release:
+#     types: [released]
+#   workflow_dispatch:
+#     inputs:
+#       version:
+#         description: "Version to publish (e.g. 2.9.2 — no v prefix)"
+#         required: true
+#         type: string
+#       dry_run:
+#         description: "Skip the AUR push (safe test)"
+#         type: boolean
+#         default: true
+# 
 permissions:
   contents: read
 

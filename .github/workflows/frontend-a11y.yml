@@ -9,9 +9,10 @@ name: Frontend a11y regression gate
 # Only changed stories, because a full sweep is ~30 minutes: far too slow to sit
 # in front of every merge. The whole suite is scanned nightly instead
 # (nightly.yml), which catches anything a branch didn't touch.
-on:
-  workflow_call:
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_call:
+# 
 permissions:
   contents: read
 

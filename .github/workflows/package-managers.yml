@@ -1,19 +1,20 @@
 name: Update Package Manager Manifests
 
-on:
-  release:
-    types: [released]
-  workflow_dispatch:
-    inputs:
-      version:
-        description: "Version to test (e.g. 2.9.2 — no v prefix)"
-        required: true
-        type: string
-      dry_run:
-        description: "Skip the git push at the end (safe test)"
-        type: boolean
-        default: true
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   release:
+#     types: [released]
+#   workflow_dispatch:
+#     inputs:
+#       version:
+#         description: "Version to test (e.g. 2.9.2 — no v prefix)"
+#         required: true
+#         type: string
+#       dry_run:
+#         description: "Skip the git push at the end (safe test)"
+#         type: boolean
+#         default: true
+# 
 permissions:
   contents: read
 

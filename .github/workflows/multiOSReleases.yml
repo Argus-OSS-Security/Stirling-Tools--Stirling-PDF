@@ -1,38 +1,39 @@
 name: Multi-OS Tauri Releases
 
-on:
-  workflow_dispatch:
-    inputs:
-      test_mode:
-        description: "Run in test mode (skip release step)"
-        required: false
-        default: "true"
-        type: choice
-        options:
-          - "true"
-          - "false"
-      platform:
-        description: "Platform to build (windows, windows-arm64, macos, linux, or all)"
-        required: true
-        default: "all"
-        type: choice
-        options:
-          - all
-          - windows
-          - windows-arm64
-          - macos
-          - linux
-      sign:
-        description: "Code sign the binaries (requires signing secrets)"
-        required: false
-        default: "true"
-        type: choice
-        options:
-          - "true"
-          - "false"
-  release:
-    types: [created]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#     inputs:
+#       test_mode:
+#         description: "Run in test mode (skip release step)"
+#         required: false
+#         default: "true"
+#         type: choice
+#         options:
+#           - "true"
+#           - "false"
+#       platform:
+#         description: "Platform to build (windows, windows-arm64, macos, linux, or all)"
+#         required: true
+#         default: "all"
+#         type: choice
+#         options:
+#           - all
+#           - windows
+#           - windows-arm64
+#           - macos
+#           - linux
+#       sign:
+#         description: "Code sign the binaries (requires signing secrets)"
+#         required: false
+#         default: "true"
+#         type: choice
+#         options:
+#           - "true"
+#           - "false"
+#   release:
+#     types: [created]
+# 
 permissions:
   contents: read
 

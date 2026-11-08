@@ -1,34 +1,35 @@
 name: PR Deployment via Comment
 
-on:
-  issue_comment:
-    types: [created]
-  workflow_dispatch:
-    inputs:
-      pr_number:
-        description: "PR number to deploy"
-        required: true
-      enable_engine:
-        description: "Deploy the AI engine alongside"
-        required: false
-        type: boolean
-        default: false
-      enable_pro:
-        description: "Enable pro features"
-        required: false
-        type: boolean
-        default: false
-      enable_enterprise:
-        description: "Enable enterprise features"
-        required: false
-        type: boolean
-        default: false
-      disable_security:
-        description: "Disable security/login"
-        required: false
-        type: boolean
-        default: true
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   issue_comment:
+#     types: [created]
+#   workflow_dispatch:
+#     inputs:
+#       pr_number:
+#         description: "PR number to deploy"
+#         required: true
+#       enable_engine:
+#         description: "Deploy the AI engine alongside"
+#         required: false
+#         type: boolean
+#         default: false
+#       enable_pro:
+#         description: "Enable pro features"
+#         required: false
+#         type: boolean
+#         default: false
+#       enable_enterprise:
+#         description: "Enable enterprise features"
+#         required: false
+#         type: boolean
+#         default: false
+#       disable_security:
+#         description: "Disable security/login"
+#         required: false
+#         type: boolean
+#         default: true
+# 
 permissions:
   contents: read
   pull-requests: read

@@ -9,15 +9,16 @@ name: Docker Compose Cucumber tests
 # back to back (~25 minutes) in front of ~4 minutes of tests. `--rerun` is
 # the script's own filter: a leg names the tests it owns and the script only
 # builds the image those tests need.
-on:
-  workflow_call:
-    inputs:
-      docker-base-changed:
-        description: "Whether the docker base image changed (forwarded from files-changed)."
-        required: false
-        type: string
-        default: "false"
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_call:
+#     inputs:
+#       docker-base-changed:
+#         description: "Whether the docker base image changed (forwarded from files-changed)."
+#         required: false
+#         type: string
+#         default: "false"
+# 
 permissions:
   contents: read
 

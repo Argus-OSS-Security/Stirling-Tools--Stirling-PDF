@@ -1,13 +1,14 @@
 name: Rollback Latest Tags to Version
 
-on:
-  workflow_dispatch:
-    inputs:
-      version:
-        description: "Version to rollback to (e.g. 2.8.0)"
-        required: true
-        type: string
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#     inputs:
+#       version:
+#         description: "Version to rollback to (e.g. 2.8.0)"
+#         required: true
+#         type: string
+# 
 permissions:
   contents: read
 

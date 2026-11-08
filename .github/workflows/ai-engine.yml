@@ -4,11 +4,12 @@ name: AI Engine CI
 # from build.yml on PRs and merge_group; also runs directly on push to main as
 # a post-merge safety net. Freshness of the generated tool_models.py is checked
 # by the shared check-generated-models workflow.
-on:
-  workflow_call:
-  push:
-    branches: [main]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_call:
+#   push:
+#     branches: [main]
+# 
 permissions:
   contents: read
 

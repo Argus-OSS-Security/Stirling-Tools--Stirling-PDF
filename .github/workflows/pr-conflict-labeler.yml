@@ -1,17 +1,18 @@
 name: PR conflict labeler
 
-on:
-  pull_request_target:
-    types:
-      - opened
-      - reopened
-      - synchronize
-      - edited
-      - ready_for_review
-  schedule:
-    - cron: "17 */6 * * *"
-  workflow_dispatch:
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request_target:
+#     types:
+#       - opened
+#       - reopened
+#       - synchronize
+#       - edited
+#       - ready_for_review
+#   schedule:
+#     - cron: "17 */6 * * *"
+#   workflow_dispatch:
+# 
 permissions:
   contents: read
 

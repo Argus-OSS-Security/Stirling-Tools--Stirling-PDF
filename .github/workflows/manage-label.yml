@@ -1,9 +1,10 @@
 name: Manage labels
 
-on:
-  schedule:
-    - cron: "30 20 * * *"
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   schedule:
+#     - cron: "30 20 * * *"
+# 
 permissions:
   contents: read
 

@@ -8,10 +8,11 @@ name: PR size limit
 # pull_request_target so a first-time contributor's PR is checked without approval; it
 # reads the diff through the API and never checks out the PR's code.
 
-on:
-  pull_request_target:
-    types: [opened, reopened, synchronize, ready_for_review, labeled, unlabeled]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request_target:
+#     types: [opened, reopened, synchronize, ready_for_review, labeled, unlabeled]
+# 
 permissions:
   contents: read
 

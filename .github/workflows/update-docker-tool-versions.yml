@@ -11,11 +11,12 @@ name: Update Docker tool versions
 
 run-name: Update Docker tool versions (${{ github.event_name }})
 
-on:
-  schedule:
-    - cron: "17 4 * * 1"
-  workflow_dispatch:
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   schedule:
+#     - cron: "17 4 * * 1"
+#   workflow_dispatch:
+# 
 jobs:
   update:
     permissions:

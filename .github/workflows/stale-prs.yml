@@ -4,26 +4,27 @@ name: Stale PR triage
 # is the kill switch. The size limit's part has its own, PR_SIZE_BOT_LIVE. The rules
 # live in .github/scripts/stale-prs.ts.
 
-on:
-  schedule:
-    - cron: "40 7 * * *"
-  workflow_dispatch:
-    inputs:
-      dry_run:
-        description: "Report what would happen without changing any PR"
-        type: boolean
-        default: true
-  pull_request:
-    paths:
-      - ".github/workflows/stale-prs.yml"
-      - ".github/scripts/*.ts"
-      - ".github/workflows/pr-turn-labels.yml"
-      - ".github/scripts/package.json"
-      - ".github/scripts/package-lock.json"
-      - ".github/scripts/tsconfig.json"
-      - ".github/workflows/pr-conflict-labeler.yml"
-      - ".github/workflows/pr-size-limit.yml"
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   schedule:
+#     - cron: "40 7 * * *"
+#   workflow_dispatch:
+#     inputs:
+#       dry_run:
+#         description: "Report what would happen without changing any PR"
+#         type: boolean
+#         default: true
+#   pull_request:
+#     paths:
+#       - ".github/workflows/stale-prs.yml"
+#       - ".github/scripts/*.ts"
+#       - ".github/workflows/pr-turn-labels.yml"
+#       - ".github/scripts/package.json"
+#       - ".github/scripts/package-lock.json"
+#       - ".github/scripts/tsconfig.json"
+#       - ".github/workflows/pr-conflict-labeler.yml"
+#       - ".github/workflows/pr-size-limit.yml"
+# 
 permissions:
   contents: read
 

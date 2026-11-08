@@ -9,20 +9,21 @@ name: Build Docker images (PR test)
 # and .dockerignore keeps host build output out of the context, so nothing
 # is built on the host first. arm64 gets a native runner leg instead of a
 # QEMU build inside the amd64 job, which took over an hour per image.
-on:
-  workflow_call:
-    inputs:
-      docker-base-changed:
-        description: "Whether the docker base image changed (forwarded from files-changed)."
-        required: false
-        type: string
-        default: "false"
-      dockerfiles-changed:
-        description: "Whether any Dockerfile changed (forwarded from files-changed). Gates the arm64 legs."
-        required: false
-        type: string
-        default: "false"
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_call:
+#     inputs:
+#       docker-base-changed:
+#         description: "Whether the docker base image changed (forwarded from files-changed)."
+#         required: false
+#         type: string
+#         default: "false"
+#       dockerfiles-changed:
+#         description: "Whether any Dockerfile changed (forwarded from files-changed). Gates the arm64 legs."
+#         required: false
+#         type: string
+#         default: "false"
+# 
 permissions:
   contents: read
 

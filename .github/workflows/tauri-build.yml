@@ -8,53 +8,54 @@ name: Build Tauri Applications
 # Note: editing this file is itself enough to make the `tauri` path filter
 # match, which is how non-desktop PRs (e.g. backend-only fixes) opt into a
 # desktop smoke build.
-on:
-  workflow_call:
-    inputs:
-      platform:
-        description: "Platform to build (windows, windows-arm64, macos, linux, windows-macos, or all)."
-        required: false
-        type: string
-        default: "all"
-      sign:
-        description: "Sign and notarize the bundles."
-        required: false
-        type: boolean
-        default: true
-      minimal:
-        description: "Fast smoke build: Linux deb only, skip rpm and the flaky AppImage pass. Used by PR builds."
-        required: false
-        type: boolean
-        default: false
-      use_shared_cache:
-        required: false
-        type: boolean
-        default: false
-  workflow_dispatch:
-    inputs:
-      platform:
-        description: "Platform to build (windows, windows-arm64, macos, linux, windows-macos, or all)"
-        required: true
-        default: "all"
-        type: choice
-        options:
-          - all
-          - windows
-          - windows-arm64
-          - macos
-          - linux
-          - windows-macos
-      sign:
-        description: "Sign and notarize the bundles."
-        required: false
-        default: true
-        type: boolean
-      minimal:
-        description: "Fast smoke build: Linux deb only, skip rpm and the flaky AppImage pass."
-        required: false
-        default: false
-        type: boolean
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_call:
+#     inputs:
+#       platform:
+#         description: "Platform to build (windows, windows-arm64, macos, linux, windows-macos, or all)."
+#         required: false
+#         type: string
+#         default: "all"
+#       sign:
+#         description: "Sign and notarize the bundles."
+#         required: false
+#         type: boolean
+#         default: true
+#       minimal:
+#         description: "Fast smoke build: Linux deb only, skip rpm and the flaky AppImage pass. Used by PR builds."
+#         required: false
+#         type: boolean
+#         default: false
+#       use_shared_cache:
+#         required: false
+#         type: boolean
+#         default: false
+#   workflow_dispatch:
+#     inputs:
+#       platform:
+#         description: "Platform to build (windows, windows-arm64, macos, linux, windows-macos, or all)"
+#         required: true
+#         default: "all"
+#         type: choice
+#         options:
+#           - all
+#           - windows
+#           - windows-arm64
+#           - macos
+#           - linux
+#           - windows-macos
+#       sign:
+#         description: "Sign and notarize the bundles."
+#         required: false
+#         default: true
+#         type: boolean
+#       minimal:
+#         description: "Fast smoke build: Linux deb only, skip rpm and the flaky AppImage pass."
+#         required: false
+#         default: false
+#         type: boolean
+# 
 permissions:
   contents: read
   pull-requests: write

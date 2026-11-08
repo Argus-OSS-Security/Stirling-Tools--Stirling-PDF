@@ -20,13 +20,14 @@ name: _runner-pick
 #   is_fork:   "true" when the trigger is a pull_request from a fork or an
 #              untrusted author_association, "false" otherwise.
 
-on:
-  workflow_call:
-    outputs:
-      is_fork:
-        description: '"true" if the trigger is an untrusted fork PR.'
-        value: ${{ jobs.pick.outputs.is_fork }}
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_call:
+#     outputs:
+#       is_fork:
+#         description: '"true" if the trigger is an untrusted fork PR.'
+#         value: ${{ jobs.pick.outputs.is_fork }}
+# 
 permissions:
   contents: read
 

@@ -1,22 +1,23 @@
 name: Auto PR V2 Deployment
 
-on:
-  pull_request:
-    types: [opened, synchronize, reopened, closed]
-  workflow_dispatch:
-    inputs:
-      pr:
-        description: "PR number to deploy"
-        required: true
-      allow_fork:
-        description: "Allow deploying fork PR?"
-        required: false
-        type: choice
-        options:
-          - "true"
-          - "false"
-        default: "false"
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+#     types: [opened, synchronize, reopened, closed]
+#   workflow_dispatch:
+#     inputs:
+#       pr:
+#         description: "PR number to deploy"
+#         required: true
+#       allow_fork:
+#         description: "Allow deploying fork PR?"
+#         required: false
+#         type: choice
+#         options:
+#           - "true"
+#           - "false"
+#         default: "false"
+# 
 permissions:
   contents: read
   issues: write

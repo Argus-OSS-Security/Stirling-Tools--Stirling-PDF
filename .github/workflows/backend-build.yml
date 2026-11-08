@@ -9,9 +9,10 @@ name: Backend build, format check, and coverage
 #   proprietary  - default build, no saas
 #   saas         - proprietary + the saas subproject (build + JUnit only,
 #                  never any runtime/integration testing)
-on:
-  workflow_call:
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_call:
+# 
 permissions:
   contents: read
   actions: read

@@ -1,10 +1,11 @@
 name: Prime Gradle Cache
 
-on:
-  workflow_call:
-  push:
-    branches: ["main"]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_call:
+#   push:
+#     branches: ["main"]
+# 
 permissions:
   contents: read
 

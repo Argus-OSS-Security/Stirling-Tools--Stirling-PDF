@@ -8,9 +8,10 @@ name: Rust Lint
 # modules. The matrix therefore runs on all three so every platform branch is
 # linted where it actually compiles, including the Windows-only thumbnail
 # handler crate.
-on:
-  workflow_call:
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_call:
+# 
 permissions:
   contents: read
 

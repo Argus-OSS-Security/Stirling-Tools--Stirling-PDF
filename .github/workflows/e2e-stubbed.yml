@@ -10,9 +10,10 @@ name: Playwright E2E (stubbed)
 # the shard list in the matrix is the single place to change the count.
 # The disk-link suite needs a desktop-mode bundle, so it is its own leg
 # instead of tailing the first chromium shard.
-on:
-  workflow_call:
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_call:
+# 
 permissions:
   contents: read
 

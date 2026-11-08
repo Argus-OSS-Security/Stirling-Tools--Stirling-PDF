@@ -3,9 +3,10 @@ name: Dependency Review
 # Reusable workflow called from build.yml. Scans dependency manifest files
 # changing in a PR for known-vulnerable packages, using the rules in
 # .github/config/dependency-review-config.yml.
-on:
-  workflow_call:
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_call:
+# 
 permissions:
   contents: read
 

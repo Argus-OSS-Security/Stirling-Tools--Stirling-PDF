@@ -1,11 +1,12 @@
 name: Auto SaaS Dev Deployment
 
-on:
-  push:
-    branches:
-      - saas-prod
-  workflow_dispatch:
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches:
+#       - saas-prod
+#   workflow_dispatch:
+# 
 permissions:
   contents: read
 

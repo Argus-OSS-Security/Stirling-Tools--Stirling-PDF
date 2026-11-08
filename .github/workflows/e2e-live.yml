@@ -3,9 +3,10 @@ name: Playwright E2E (live backend)
 # Reusable workflow called from build.yml. Live-backend Playwright suite —
 # boots Spring Boot and runs auth + real tool round-trips against the live
 # server.
-on:
-  workflow_call:
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_call:
+# 
 permissions:
   contents: read
 

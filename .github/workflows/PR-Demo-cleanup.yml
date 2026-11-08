@@ -1,9 +1,10 @@
 name: PR Deployment cleanup
 
-on:
-  pull_request_target:
-    types: [opened, synchronize, reopened, closed]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request_target:
+#     types: [opened, synchronize, reopened, closed]
+# 
 permissions:
   contents: read
 

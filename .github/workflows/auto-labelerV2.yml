@@ -1,11 +1,12 @@
 name: "Auto Pull Request Labeler V2"
-on:
-  pull_request_target:
-    types: [opened, synchronize]
-    branches:
-      - main
-      - V3
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request_target:
+#     types: [opened, synchronize]
+#     branches:
+#       - main
+#       - V3
+# 
 permissions:
   contents: read
 

@@ -5,12 +5,13 @@ name: PR turn labels
 # in .github/scripts/pr-turn.ts. Runs whatever STALE_PR_BOT_LIVE says: a label left
 # stale while the triage is off would date its warning from before.
 
-on:
-  pull_request_target:
-    types: [synchronize, ready_for_review, review_requested]
-  issue_comment:
-    types: [created]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request_target:
+#     types: [synchronize, ready_for_review, review_requested]
+#   issue_comment:
+#     types: [created]
+# 
 permissions:
   contents: read
 

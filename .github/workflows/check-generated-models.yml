@@ -7,16 +7,17 @@ name: Check generated models
 # any committed file is out of date. Called from build.yml when the
 # backend Java, frontend, or engine changes; also runs on push to main as a
 # post-merge safety net.
-on:
-  workflow_call:
-    inputs:
-      use_shared_cache:
-        required: false
-        type: boolean
-        default: false
-  push:
-    branches: [main]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_call:
+#     inputs:
+#       use_shared_cache:
+#         required: false
+#         type: boolean
+#         default: false
+#   push:
+#     branches: [main]
+# 
 permissions:
   contents: read
 
